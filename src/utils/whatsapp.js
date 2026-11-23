@@ -1,4 +1,4 @@
-import { SHOP, formatPrice } from "../config";
+import { SHOP } from "../config";
 
 const wa = (text) => `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`;
 
@@ -60,34 +60,82 @@ export function consultLink(f) {
   );
 }
 
-// Builds the WhatsApp order message and returns a wa.me link
+// ---- Invoice-style order message ----
+// WhatsApp shows text between ``` in a fixed-width font, so the item table lines up.
+const W = 32; // characters per table row (fits a phone screen)
+const money = (n) => Number(n).toLocaleString("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const pad = (s, n) => String(s).padEnd(n).slice(0, n);
+const lpad = (s, n) => String(s).padStart(n);
+const hr = (c = "-") => c.repeat(W);
+
+// wrap text into chunks no wider than n, breaking at spaces
+function wrap(text, n) {
+  const out = [];
+  let line = "";
+  for (const word of String(text).split(/\s+/)) {
+    if (!line) line = word;
+    else if ((line + " " + word).length <= n) line += " " + word;
+    else { out.push(line); line = word; }
+    while (line.length > n) { out.push(line.slice(0, n)); line = line.slice(n); }
+  }
+  if (line) out.push(line);
+  return out;
+}
+
+// No(2) + Item(17) + Qty(4) + Amount(9) = 32
+function itemRows(l, i) {
+  const name = wrap(`${l.product.name} (${l.size})`, 16);
+  return name.map((part, k) =>
+    k === 0
+      ? pad(i + 1, 3) + pad(part, 16) + lpad(l.qty, 4) + lpad(money(l.total), 9)
+      : "   " + part
+  );
+}
+
+const sumRow = (label, value) => pad(label, W - String(value).length) + value;
+
+function invoiceDate(d = new Date()) {
+  return d.toLocaleString("en-IN", {
+    day: "2-digit", month: "short", year: "numeric", hour: "numeric", minute: "2-digit", hour12: true,
+  });
+}
+
+// Builds the WhatsApp order (invoice) message and returns a wa.me link
 export function orderLink({ items, subtotal, delivery, customer, ref }) {
-  // WhatsApp formatting: *bold*, _italic_; line breaks are kept in the chat
-  const rule = "━━━━━━━━━━━━━━";
-  const lines = items.flatMap((l, i) => [
-    `${i + 1}. *${l.product.name}*`,
-    `    ${l.size} × ${l.qty}  =  ${formatPrice(l.total)}`,
-  ]);
+  const freeDelivery = delivery === 0;
+  const table = [
+    "```",
+    pad("#", 3) + pad("Item", 16) + lpad("Qty", 4) + lpad("Amt (₹)", 9),
+    hr(),
+    ...items.flatMap(itemRows),
+    hr(),
+    sumRow("Subtotal", money(subtotal)),
+    sumRow("Delivery", freeDelivery ? "FREE" : "To be confirmed"),
+    hr("="),
+    sumRow(freeDelivery ? "TOTAL (₹)" : "TOTAL* (₹)", money(subtotal)),
+    hr("="),
+    "```",
+  ];
 
   const text = [
-    `*New Order — ${SHOP.shortName}*`,
-    ref ? `Order ref: *${ref}*` : null,
-    rule,
+    `*ORDER INVOICE*`,
+    `*${SHOP.name}*`,
+    SHOP.address,
+    `Ph: ${SHOP.phoneDisplay}`,
     "",
-    "🛒 *Items*",
-    ...lines,
+    ref ? `*Invoice No:* ${ref}` : null,
+    `*Date:* ${invoiceDate()}`,
     "",
-    rule,
-    `Subtotal:  *${formatPrice(subtotal)}*`,
-    `Delivery:  ${delivery === 0 ? "Free" : "_To be confirmed_"}`,
-    rule,
-    "",
-    "📦 *Deliver to*",
-    `Name: ${customer.name}`,
+    "*Bill To*",
+    customer.name,
     `Phone: ${customer.phone}`,
-    `Address: ${customer.address}`,
-    `Pincode: ${customer.pincode}`,
+    `Address: ${customer.address} – ${customer.pincode}`,
     customer.note ? `Note: ${customer.note}` : null,
+    "",
+    ...table,
+    freeDelivery ? null : "_* Delivery charge will be added on confirmation._",
+    `*Items:* ${items.length}  |  *Qty:* ${items.reduce((n, l) => n + l.qty, 0)}`,
+    `*Payment:* To be confirmed on WhatsApp`,
     "",
     "Please confirm my order. Thank you!",
   ]
