@@ -62,25 +62,34 @@ export function consultLink(f) {
 
 // Builds the WhatsApp order message and returns a wa.me link
 export function orderLink({ items, subtotal, delivery, customer, ref }) {
-  const lines = items.map(
-    (l, i) => `${i + 1}. ${l.product.name} — ${l.size} × ${l.qty} = ${formatPrice(l.total)}`
-  );
+  // WhatsApp formatting: *bold*, _italic_; line breaks are kept in the chat
+  const rule = "━━━━━━━━━━━━━━";
+  const lines = items.flatMap((l, i) => [
+    `${i + 1}. *${l.product.name}*`,
+    `    ${l.size} × ${l.qty}  =  ${formatPrice(l.total)}`,
+  ]);
 
   const text = [
-    `Hello ${SHOP.shortName}, I would like to place an order:`,
-    ref ? `Order ref: ${ref}` : null,
+    `*New Order — ${SHOP.shortName}*`,
+    ref ? `Order ref: *${ref}*` : null,
+    rule,
     "",
+    "🛒 *Items*",
     ...lines,
     "",
-    `Subtotal: ${formatPrice(subtotal)}`,
-    `Delivery: ${delivery === 0 ? "Free" : "To be confirmed"}`,
+    rule,
+    `Subtotal:  *${formatPrice(subtotal)}*`,
+    `Delivery:  ${delivery === 0 ? "Free" : "_To be confirmed_"}`,
+    rule,
     "",
-    "Delivery details",
+    "📦 *Deliver to*",
     `Name: ${customer.name}`,
     `Phone: ${customer.phone}`,
     `Address: ${customer.address}`,
     `Pincode: ${customer.pincode}`,
     customer.note ? `Note: ${customer.note}` : null,
+    "",
+    "Please confirm my order. Thank you!",
   ]
     .filter((l) => l !== null)
     .join("\n");
