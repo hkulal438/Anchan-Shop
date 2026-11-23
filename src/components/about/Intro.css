@@ -1,0 +1,708 @@
+/* =========================================================
+   ANCHAN AYURVEDIC INDUSTRIES
+   INTRO — Story (triptych) · Growth (lineage) · Principles
+   Headings: Playfair Display (regular) · Content: Lexend Deca
+   All classes are prefixed "intro-" (no clashes with About).
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lexend+Deca:wght@300;400;500&display=swap");
+
+.intro-section {
+  --in-navy: #1c2340;
+  --in-text: #4a4a4a;
+  --in-muted: #6b6b6b;
+  --in-green: #8cc63f;
+  --in-green-dark: #6fa52a;
+  --in-green-deep: #3f6b1f;
+  --in-forest: #1f3b2c;
+  --in-forest-2: #2a4d39;
+  --in-cream: #f1eae0;
+  --in-cream-soft: #faf7f2;
+  --in-gold: #c8a45c;
+
+  --in-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --in-sans: "Lexend Deca", "Segoe UI", Arial, sans-serif;
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  overflow: clip;          /* clip (not hidden) keeps the sticky heading working */
+  background: #ffffff;
+  color: var(--in-text);
+  font-family: var(--in-sans);
+}
+
+.intro-section *,
+.intro-section *::before,
+.intro-section *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SHARED HEADING + BUTTON
+========================================================= */
+
+.intro-heading {
+  margin: 0 0 26px;
+
+  color: var(--in-navy);
+  font-family: var(--in-serif);
+  font-size: clamp(36px, 3.5vw, 56px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.intro-heading span {
+  display: block;
+  color: var(--in-green-dark);
+}
+
+.intro-heading--center {
+  text-align: center;
+}
+
+.intro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 52px;
+  margin-top: 22px;
+  padding: 0 12px 0 26px;
+
+  background: var(--in-green);
+  color: #ffffff;
+  border-radius: 999px;
+  text-decoration: none;
+
+  font-family: var(--in-sans);
+  font-size: 16px;
+  font-weight: 400;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.intro-cta:hover {
+  background: var(--in-green-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(140, 198, 63, 0.35);
+}
+
+.intro-cta-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  color: var(--in-green);
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.intro-cta:hover .intro-cta-icon {
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   1. STORY — panorama feature
+========================================================= */
+
+.intro-story {
+  padding: 110px 32px 120px;
+  background: var(--in-cream);
+}
+
+.intro-story-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* wide cinematic photo */
+.intro-pano {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  border-radius: 36px;
+  box-shadow: 0 40px 80px -30px rgba(31, 59, 44, 0.45);
+}
+
+.intro-pano img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  transform: scale(1.02);
+  transition: transform 1.6s ease;
+}
+
+.intro-pano:hover img {
+  transform: scale(1.06);
+}
+
+/* text under the photo: heading left, content right */
+.intro-story-content {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 80px;
+  align-items: start;
+
+  margin-top: 70px;
+  padding: 56px 56px 0;
+  border-top: 1px solid rgba(28, 35, 64, 0.12);
+}
+
+.intro-story-heading {
+  margin: 0;
+}
+
+.intro-story-body {
+  max-width: 640px;
+}
+
+/* opening line: larger, navy, with a green rule */
+.intro-story-lead {
+  margin: 0 0 22px;
+  padding-left: 20px;
+  border-left: 3px solid var(--in-green);
+
+  color: var(--in-navy);
+  font-family: var(--in-sans);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.intro-story-lead strong {
+  color: var(--in-green-dark);
+  font-weight: 500;
+}
+
+.intro-copy {
+  margin: 0 0 16px;
+  color: var(--in-text);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.intro-copy strong {
+  color: var(--in-navy);
+  font-weight: 500;
+}
+
+.intro-story-body .intro-cta {
+  margin-top: 14px;
+}
+
+
+/* =========================================================
+   2. GROWTH — seed → sapling → tree on a rising vine
+========================================================= */
+
+.intro-growth {
+  padding: 130px 32px 120px;
+  background: #ffffff;
+}
+
+.intro-growth .intro-heading {
+  margin-bottom: 64px;
+}
+
+.intro-growth-track {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-vine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  pointer-events: none;
+}
+
+.intro-growth-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.intro-growth-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.intro-growth-step--1 { padding-top: 178px; }
+.intro-growth-step--2 { padding-top: 104px; }
+.intro-growth-step--3 { padding-top: 14px; }
+
+.intro-growth-node {
+  width: 74px;
+  height: 74px;
+  margin: -37px 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 2px solid var(--in-green);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px #ffffff,
+    0 16px 34px rgba(63, 107, 31, 0.18);
+
+  color: var(--in-green-deep);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.intro-growth-step:hover .intro-growth-node {
+  background: var(--in-green);
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+.intro-growth-stage {
+  margin: 0 0 6px;
+  color: var(--in-gold);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.intro-growth-name {
+  margin: 0 0 4px;
+  color: var(--in-navy);
+  font-family: var(--in-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.intro-growth-role {
+  margin: 0 0 14px;
+  color: var(--in-green-dark);
+  font-size: 13.5px;
+  font-weight: 400;
+}
+
+.intro-growth-detail {
+  max-width: 330px;
+  margin: 0;
+  color: var(--in-text);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   3. PRINCIPLES — dark band, editorial index rows
+========================================================= */
+
+.intro-philosophy {
+  position: relative;
+  padding: 130px 32px;
+  overflow: hidden;
+  overflow: clip;
+
+  background:
+    radial-gradient(circle at 0% 0%, rgba(140, 198, 63, 0.16), transparent 40%),
+    linear-gradient(160deg, #18301f 0%, var(--in-forest) 55%, var(--in-forest-2) 100%);
+  color: #ffffff;
+}
+
+.intro-philosophy-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 90px;
+  align-items: start;
+}
+
+/* heading stays in view while the rows scroll past */
+.intro-philosophy-head {
+  position: sticky;
+  top: 140px;
+}
+
+.intro-philosophy .intro-heading {
+  color: #ffffff;
+}
+
+.intro-philosophy .intro-heading span {
+  color: var(--in-green);
+}
+
+.intro-philosophy-text {
+  margin: 0;
+  max-width: 440px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16.5px;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.intro-principles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.intro-principle {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;      /* keeps the hover fill inside the row */
+
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 48px;
+  grid-template-areas:
+    "num title arrow"
+    "num text  arrow";
+  column-gap: 24px;
+  row-gap: 8px;
+  align-items: center;
+
+  padding: 40px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+  transition: color 0.4s ease;
+}
+
+/* green fill that sweeps in on hover */
+.intro-principle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--in-green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.intro-principle:hover::before {
+  transform: scaleX(1);
+}
+
+.intro-principle-number {
+  grid-area: num;
+  color: var(--in-gold);
+  font-family: var(--in-serif);
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.intro-principle-title {
+  grid-area: title;
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--in-serif);
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.15;
+  transition: color 0.4s ease;
+}
+
+.intro-principle-text {
+  grid-area: text;
+  margin: 0;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15.5px;
+  font-weight: 300;
+  line-height: 1.75;
+  transition: color 0.4s ease;
+}
+
+.intro-principle-arrow {
+  grid-area: arrow;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #ffffff;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.intro-principle:hover .intro-principle-number,
+.intro-principle:hover .intro-principle-title {
+  color: var(--in-forest);
+}
+
+.intro-principle:hover .intro-principle-text {
+  color: rgba(31, 59, 44, 0.85);
+}
+
+.intro-principle:hover .intro-principle-arrow {
+  background: var(--in-forest);
+  border-color: var(--in-forest);
+  color: var(--in-green);
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+  .intro-story-content {
+    gap: 50px;
+    padding: 48px 24px 0;
+  }
+
+  .intro-philosophy-inner {
+    gap: 56px;
+  }
+
+  .intro-principle {
+    grid-template-columns: 70px minmax(0, 1fr) 44px;
+    padding: 34px 20px;
+  }
+
+  .intro-principle-number {
+    font-size: 44px;
+  }
+
+  .intro-principle-title {
+    font-size: 29px;
+  }
+}
+
+
+/* =========================================================
+   TABLET — stack
+========================================================= */
+
+@media (max-width: 900px) {
+  /* story */
+  .intro-story {
+    padding: 80px 24px 90px;
+  }
+
+  .intro-pano {
+    aspect-ratio: 16 / 10;
+    border-radius: 28px;
+  }
+
+  .intro-story-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 48px;
+    padding: 40px 0 0;
+  }
+
+  /* growth */
+  .intro-growth {
+    padding: 100px 24px 90px;
+  }
+
+  .intro-vine {
+    display: none;
+  }
+
+  .intro-growth-list {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .intro-growth-step--1,
+  .intro-growth-step--2,
+  .intro-growth-step--3 {
+    padding-top: 0;
+  }
+
+  .intro-growth-node {
+    margin-top: 0;
+  }
+
+  .intro-growth-step + .intro-growth-step::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 36px;
+    margin: -46px auto 10px;
+    background: repeating-linear-gradient(180deg, var(--in-green) 0 3px, transparent 3px 9px);
+  }
+
+  /* principles */
+  .intro-philosophy {
+    padding: 90px 24px;
+  }
+
+  .intro-philosophy-inner {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .intro-philosophy-head {
+    position: static;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .intro-heading {
+    font-size: clamp(30px, 8.4vw, 38px);
+    margin-bottom: 18px;
+  }
+
+  .intro-story {
+    padding: 64px 18px 70px;
+  }
+
+  .intro-pano {
+    aspect-ratio: 4 / 3;
+    border-radius: 24px;
+  }
+
+  .intro-pano img {
+    object-position: 54% center;
+  }
+
+  .intro-story-content {
+    margin-top: 36px;
+    padding-top: 30px;
+    gap: 18px;
+  }
+
+  .intro-story-lead {
+    font-size: 16.5px;
+    padding-left: 16px;
+  }
+
+  .intro-copy {
+    font-size: 14.5px;
+    line-height: 1.85;
+  }
+
+  .intro-cta {
+    height: 48px;
+    font-size: 15px;
+    padding: 0 10px 0 22px;
+  }
+
+  .intro-growth {
+    padding: 80px 18px 70px;
+  }
+
+  .intro-growth .intro-heading {
+    margin-bottom: 44px;
+  }
+
+  .intro-growth-node {
+    width: 64px;
+    height: 64px;
+  }
+
+  .intro-growth-name {
+    font-size: 21px;
+  }
+
+  .intro-growth-detail {
+    font-size: 14px;
+  }
+
+  .intro-philosophy {
+    padding: 70px 18px;
+  }
+
+  .intro-philosophy-text {
+    font-size: 15px;
+  }
+
+  .intro-principle {
+    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-areas:
+      "num title"
+      "num text";
+    column-gap: 14px;
+    padding: 26px 8px;
+  }
+
+  .intro-principle-arrow {
+    display: none;
+  }
+
+  .intro-principle-number {
+    font-size: 36px;
+    align-self: start;
+  }
+
+  .intro-principle-title {
+    font-size: 25px;
+  }
+
+  .intro-principle-text {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.intro-cta:focus-visible {
+  outline: 2px solid var(--in-green-dark);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-cta,
+  .intro-cta-icon,
+  .intro-pano img,
+  .intro-growth-node,
+  .intro-principle,
+  .intro-principle::before,
+  .intro-principle-number,
+  .intro-principle-title,
+  .intro-principle-text,
+  .intro-principle-arrow {
+    transition: none;
+  }
+}
