@@ -23,10 +23,7 @@ women.jpg        Women's Wellness
 skin.jpg         Skin Wellness
 oral.jpg         Tooth & Oral Care
 weight.jpg       Weight Management
-<<<<<<< HEAD
-=======
 postnatal.jpg    Post-Delivery Care
->>>>>>> 8ba4a90 (..)
 
 Current photos
 --------------
@@ -52,7 +49,4 @@ women        photo-1628477116196-48afe0d209e0
 skin         photo-1728727217834-b190862837a3
 oral         photo-1677026010083-78ec7f1b84ed
 weight       photo-1764314232905-2c3f32d6c717
-<<<<<<< HEAD
-=======
 postnatal    photo-1780329941563-866557aca9f7
->>>>>>> 8ba4a90 (..)

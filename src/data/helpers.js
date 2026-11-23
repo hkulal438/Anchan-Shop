@@ -1,14 +1,11 @@
 import { categories, healthNeeds, products } from "./catalog";
 
 export const productById = Object.fromEntries(products.map((p) => [p.id, p]));
-<<<<<<< HEAD
-=======
 
 // Categories sold only after a doctor's consultation — shown in the shop,
 // but enquired about on WhatsApp instead of being added to the cart.
 export const CONSULT_ONLY_CATEGORIES = ["bhasma"];
 export const isConsultOnly = (p) => CONSULT_ONLY_CATEGORIES.includes(p?.category);
->>>>>>> 8ba4a90 (..)
 export const categoryName = (id) => categories.find((c) => c.id === id)?.name || "";
 export const needName = (id) => healthNeeds.find((n) => n.id === id)?.name || "";
 

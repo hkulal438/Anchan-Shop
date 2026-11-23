@@ -2,14 +2,6 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import ProductImage from "./ProductImage";
-<<<<<<< HEAD
-import Icon from "./Icons";
-import { useCart } from "../context/CartContext";
-import { bestSellers, categoryName } from "../data/helpers";
-
-const bestSellerIds = new Set(bestSellers.map((p) => p.id));
-import { formatPrice } from "../config";
-=======
 import Icon, { WhatsAppIcon } from "./Icons";
 import { useCart } from "../context/CartContext";
 import { bestSellers, categoryName, isConsultOnly } from "../data/helpers";
@@ -17,7 +9,6 @@ import { prescriptionLink } from "../utils/whatsapp";
 import { formatPrice } from "../config";
 
 const bestSellerIds = new Set(bestSellers.map((p) => p.id));
->>>>>>> 8ba4a90 (..)
 
 export default function ProductCard({ product, eager = false }) {
   const { add, setOpen } = useCart();
@@ -57,8 +48,6 @@ export default function ProductCard({ product, eager = false }) {
         </h3>
         {product.short && <p className="pcard-short">{product.short}</p>}
 
-<<<<<<< HEAD
-=======
         {isConsultOnly(product) ? (
           <div className="pcard-buy pcard-consult">
             <p className="pcard-rx">
@@ -69,7 +58,6 @@ export default function ProductCard({ product, eager = false }) {
             </a>
           </div>
         ) : (
->>>>>>> 8ba4a90 (..)
         <div className="pcard-buy">
           <div className="pcard-price-row">
             <span className="pcard-price">{formatPrice(pack.mrp)}</span>
@@ -100,10 +88,7 @@ export default function ProductCard({ product, eager = false }) {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
         )}
->>>>>>> 8ba4a90 (..)
       </div>
     </article>
   );

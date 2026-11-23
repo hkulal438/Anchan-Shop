@@ -88,8 +88,6 @@ export function orderLink({ items, subtotal, delivery, customer, ref }) {
   return `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
-<<<<<<< HEAD
-=======
 // Bhasma and other doctor-prescribed medicines: start a consultation enquiry
 export function prescriptionLink(productName) {
   return wa(
@@ -98,7 +96,6 @@ export function prescriptionLink(productName) {
   );
 }
 
->>>>>>> 8ba4a90 (..)
 export function askLink(productName) {
   const text = `Hello ${SHOP.shortName}, I have a question about ${productName}.`;
   return `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`;
