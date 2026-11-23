@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 import Icon from "../components/Icons";
 import ProductImage from "../components/ProductImage";
+<<<<<<< HEAD
+=======
+import BhasmaNote from "../components/BhasmaNote";
+>>>>>>> 8ba4a90 (..)
 import { categories, healthNeeds } from "../data/catalog";
 import { productById } from "../data/helpers";
 
@@ -25,7 +29,10 @@ const TYPE_COVER = {
   capsules: "rumovin-capsule",
   malahara: "gandhaka-malahara",
   "arka-satva": "kumari-shampoo",
+<<<<<<< HEAD
   bhasma: "shankha-bhasma",
+=======
+>>>>>>> 8ba4a90 (..)
   tablets: "shwasari-tablet",
   "vati-guggulu": "chandraprabha-vati",
 };
@@ -39,7 +46,11 @@ const MODES = {
   },
   type: {
     title: "Product Type",
+<<<<<<< HEAD
     text: "From arishtas and tailas to bhasmas and capsules — browse our medicines by form.",
+=======
+    text: "From arishtas and tailas to churnas and capsules — browse our medicines by form.",
+>>>>>>> 8ba4a90 (..)
     items: [...categories].sort((a, b) => a.name.localeCompare(b.name)),
     param: "type",
   },
@@ -96,6 +107,13 @@ export default function Categories({ mode = "need" }) {
         ))}
       </section>
 
+<<<<<<< HEAD
+=======
+      {mode === "type" && (
+        <div className="container cats-rx"><BhasmaNote /></div>
+      )}
+
+>>>>>>> 8ba4a90 (..)
       <section className="cats-switch">
         <div className="container">
           {mode === "need" ? (

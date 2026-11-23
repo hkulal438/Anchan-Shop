@@ -1,5 +1,9 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { products } from "../data/catalog";
+<<<<<<< HEAD
+=======
+import { isConsultOnly } from "../data/helpers";
+>>>>>>> 8ba4a90 (..)
 
 const CartContext = createContext(null);
 const KEY = "anchan-shop-cart";
@@ -10,7 +14,13 @@ const load = () => {
   try {
     const saved = JSON.parse(localStorage.getItem(KEY) || "[]");
     // keep only lines that still match a product + pack
+<<<<<<< HEAD
     return saved.filter((l) => byId[l.id] && byId[l.id].packs.some((k) => k.size === l.size));
+=======
+    return saved.filter(
+      (l) => byId[l.id] && !isConsultOnly(byId[l.id]) && byId[l.id].packs.some((k) => k.size === l.size)
+    );
+>>>>>>> 8ba4a90 (..)
   } catch {
     return [];
   }
@@ -37,6 +47,10 @@ export function CartProvider({ children }) {
 
     const add = (id, size, qty = 1) =>
       setLines((prev) => {
+<<<<<<< HEAD
+=======
+        if (isConsultOnly(byId[id])) return prev; // prescribed medicines are not sold online
+>>>>>>> 8ba4a90 (..)
         const found = prev.find((l) => l.id === id && l.size === size);
         if (found) return prev.map((l) => (l === found ? { ...l, qty: Math.min(99, l.qty + qty) } : l));
         return [...prev, { id, size, qty }];

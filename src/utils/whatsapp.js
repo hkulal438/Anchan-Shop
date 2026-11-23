@@ -88,6 +88,17 @@ export function orderLink({ items, subtotal, delivery, customer, ref }) {
   return `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
+<<<<<<< HEAD
+=======
+// Bhasma and other doctor-prescribed medicines: start a consultation enquiry
+export function prescriptionLink(productName) {
+  return wa(
+    `Hello ${SHOP.shortName}, I would like to enquire about ${productName}. ` +
+      "I understand it is given after a doctor's consultation — please call me back."
+  );
+}
+
+>>>>>>> 8ba4a90 (..)
 export function askLink(productName) {
   const text = `Hello ${SHOP.shortName}, I have a question about ${productName}.`;
   return `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(text)}`;
