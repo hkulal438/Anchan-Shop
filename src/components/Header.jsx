@@ -6,7 +6,7 @@ import herbs from "../assets/herbs.jpg";
 import Icon, { WhatsAppIcon } from "./Icons";
 import { useCart } from "../context/CartContext";
 import { categories, healthNeeds } from "../data/catalog";
-import { SHOP, formatPrice } from "../config";
+import { SHOP } from "../config";
 
 // health needs listed A–Z, like a category index
 const needsAZ = [...healthNeeds].sort((a, b) => a.name.localeCompare(b.name));
@@ -134,10 +134,6 @@ export default function Header() {
     <>
       <div className="topbar">
         <div className="container topbar-inner">
-          <p className="topbar-offer">
-            <Icon name="truck" size={16} />
-            Free delivery on orders above {formatPrice(SHOP.freeDeliveryAbove)}
-          </p>
           <a className="topbar-wa" href={`https://wa.me/${SHOP.whatsapp}`} target="_blank" rel="noreferrer">
             <WhatsAppIcon size={15} /> Order on WhatsApp: {SHOP.phoneDisplay}
           </a>

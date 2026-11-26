@@ -143,7 +143,7 @@ button { cursor: pointer; }
 .topbar-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   min-height: 38px;
 }
@@ -1852,7 +1852,6 @@ button { cursor: pointer; }
 @media (max-width: 760px) {
   .container { padding: 0 16px; }
 
-  .topbar-wa { display: none; }
   .topbar-inner { justify-content: center; }
 
 

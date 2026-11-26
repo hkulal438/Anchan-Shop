@@ -78,7 +78,7 @@ export const healthNeeds = [
   {
     "id": "digestion",
     "name": "Digestive Wellness",
-    "count": 69
+    "count": 65
   },
   {
     "id": "eye-ent",
@@ -88,7 +88,7 @@ export const healthNeeds = [
   {
     "id": "fever",
     "name": "Fever & Infections",
-    "count": 39
+    "count": 37
   },
   {
     "id": "hair",
@@ -103,7 +103,7 @@ export const healthNeeds = [
   {
     "id": "joints",
     "name": "Joint & Pain Relief",
-    "count": 56
+    "count": 53
   },
   {
     "id": "urinary",
@@ -190,7 +190,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/abhayarishta.webp",
   "imageBg": null
  },
  {
@@ -265,7 +265,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/aravindasava.webp",
   "imageBg": null
  },
  {
@@ -301,7 +301,7 @@ export const products = [
     "mrp": 1255
    }
   ],
-  "image": null,
+  "image": "/products/arjunarishta.webp",
   "imageBg": null
  },
  {
@@ -337,7 +337,7 @@ export const products = [
     "mrp": 1255
    }
   ],
-  "image": null,
+  "image": "/products/asanadi-kada.webp",
   "imageBg": null
  },
  {
@@ -373,7 +373,7 @@ export const products = [
     "mrp": 1255
    }
   ],
-  "image": null,
+  "image": "/products/ashokarishta.webp",
   "imageBg": null
  },
  {
@@ -411,7 +411,7 @@ export const products = [
     "mrp": 1500
    }
   ],
-  "image": null,
+  "image": "/products/ashwagandharishta.webp",
   "imageBg": null
  },
  {
@@ -440,7 +440,7 @@ export const products = [
     "mrp": 915
    }
   ],
-  "image": null,
+  "image": "/products/asto-noni.webp",
   "imageBg": null
  },
  {
@@ -477,7 +477,7 @@ export const products = [
     "mrp": 1455
    }
   ],
-  "image": null,
+  "image": "/products/balarishta.webp",
   "imageBg": null
  },
  {
@@ -552,7 +552,7 @@ export const products = [
     "mrp": 1500
    }
   ],
-  "image": null,
+  "image": "/products/bhringarajasava.webp",
   "imageBg": null
  },
  {
@@ -591,7 +591,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/chandanasava.webp",
   "imageBg": null
  },
  {
@@ -628,7 +628,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/chavikasava.webp",
   "imageBg": null
  },
  {
@@ -665,7 +665,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/danthyarishta.webp",
   "imageBg": null
  },
  {
@@ -744,7 +744,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/devadarvarishta.webp",
   "imageBg": null
  },
  {
@@ -765,7 +765,7 @@ export const products = [
     "mrp": 955
    }
   ],
-  "image": null,
+  "image": "/products/dia-noni-sugarless.webp",
   "imageBg": null
  },
  {
@@ -800,7 +800,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/draksharishta.webp",
   "imageBg": null
  },
  {
@@ -1900,9 +1900,8 @@ export const products = [
   "indication": "Indigestion, Abdominal pain / Burning sensation , Nausea and vomiting in Dyspepsia and Morning sickness",
   "ingredients": "Matulunga Rasa, Nimbuka Rasa, ArdrakaSvarasa, Saindhava Lavana,Yastimadhu, Candana and Sarkara",
   "needs": [
-   "digestion",
-   "immunity",
-   "joints"
+    "digestion",
+    "immunity"
   ],
   "packs": [
    {
@@ -2126,9 +2125,7 @@ export const products = [
   "indication": "Krimihara (Antimicrobial), useful for fumigation purpose, especially for kids. Purifies and sterilizes area / room prevents the occurrence of Infective disorders and Graharoga in children",
   "ingredients": "Sarjarasa, Guggulu, Jatamamsi, Kunduru, Usira, Candana, Nirgundi and Pachchile",
   "needs": [
-   "kids",
-   "digestion",
-   "fever"
+    "kids"
   ],
   "packs": [
    {
@@ -2375,8 +2372,7 @@ export const products = [
   "indication": "Krimihara (Antimicrobial), useful for fumigation purpose, Purifies and sterilizes area / room",
   "ingredients": "Siddharta, Sveta Sarshapa, Sveta Kustha, Bhallataka, Vaca, Basta Loma, Tagara, Bhoorja, Guggulu",
   "needs": [
-   "digestion",
-   "fever"
+    "fever"
   ],
   "packs": [
    {
@@ -3022,7 +3018,7 @@ export const products = [
     "mrp": 880
    }
   ],
-  "image": null,
+  "image": "/products/aloe-gel.webp",
   "imageBg": null
  },
  {
@@ -3056,9 +3052,7 @@ export const products = [
   "indication": "Skin diseases, Tineasis skin lesions ( Tinea pedis- Fungal infection of the foot; Tinea cruris- Jock itch; Tinea corporis- Ringworm infection; Tinea versicolor- Sibba) etc.",
   "ingredients": "Taila, Madhucchistha, Gandhaka, Giri Sindoora, Tankana, Karpoora",
   "needs": [
-   "digestion",
-   "fever",
-   "skin"
+    "skin"
   ],
   "packs": [
    {
@@ -3079,9 +3073,8 @@ export const products = [
   "indication": "Skin diseases,Paronychia, Tineasis skin lesions ( Tinea pedis- Fungal infection of the foot; Tinea cruris- Jock itch; Tinea corporis- Ringworm infection; Tinea versicolor- Sibba) etc.",
   "ingredients": "Karpoora, Gandhaka, Tankana, Spatika, NimbuSvarasa",
   "needs": [
-   "digestion",
-   "fever",
-   "skin"
+    "fever",
+    "skin"
   ],
   "packs": [
    {
@@ -3165,9 +3158,8 @@ export const products = [
   "indication": "Sitapitta – Udarda (Urticaria) ,Rajayksma (Respiratory disease with Cachexia like Tuberculosis / Lung Ca), Raktapitta (Bleeding disorders), Kasa-Svasa(Respiratory conditions like bronchitis, bronchial asthma presenting with cough, wheezing), Amlapitta (Gastritis) , Aruchi , Agnimandya ( GI diseases with tastelessness and loss of appetite), Shoola (Pain abdomen due to GI Diseases) , Grahani (Irritable/ inflammatory bowel diseases), Vibandha (Constipation)",
   "ingredients": "Ardraka, Goghrita, Godugdha, Sarkara, Pippali, Pippali Mula, Marica, Sunthi,Citraka, Vidanga, Musta, Nagakesara, Tvak, Ela, Patra, Karcura",
   "needs": [
-   "respiratory",
-   "digestion",
-   "joints"
+    "respiratory",
+    "digestion"
   ],
   "packs": [
    {
@@ -3200,9 +3192,8 @@ export const products = [
   "indication": "Balya (Strengthens body), Rasayana (Rejuvenator), Vajikarana (Aphrodisiac), Male infertility – Helpful in impotency by correcting the Erectile dysfunction, Premature ejaculation ,Abnormality in sperm, semen etc , Vatavyadhi (Neurological diseases like Stroke)",
   "ingredients": "Sarkara, Asvagandha, Sveta Sariva, Sveta Jiraka, Madhusnuhi, Draksha, Ghrita, Madhu, Ela",
   "needs": [
-   "immunity",
-   "joints",
-   "men"
+    "immunity",
+    "men"
   ],
   "packs": [
    {
