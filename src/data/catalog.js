@@ -983,7 +983,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/kanakasava.webp",
   "imageBg": null
  },
  {
@@ -1058,7 +1058,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/kiratharishta.webp",
   "imageBg": null
  },
  {
@@ -1241,7 +1241,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/lohasava.webp",
   "imageBg": null
  },
  {
@@ -1279,7 +1279,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/mahamanjistadi-kada.webp",
   "imageBg": null
  },
  {
@@ -1742,7 +1742,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/sarivadyasava.webp",
   "imageBg": null
  },
  {
