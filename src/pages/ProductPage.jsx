@@ -23,11 +23,6 @@ export default function ProductPage() {
     setQty(1);
   }, [product]);
 
-  useEffect(() => {
-    if (product) document.title = `${product.name} — Anchan Ayurveda Shop`;
-    return () => { document.title = "Anchan Ayurveda Shop"; };
-  }, [product]);
-
   if (!product) return <Navigate to="/shop" replace />;
 
   const pack = product.packs.find((k) => k.size === size) || product.packs[0];

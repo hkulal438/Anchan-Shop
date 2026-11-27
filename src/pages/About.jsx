@@ -17,6 +17,7 @@ export default function About() {
 
   return (
     <div className="about">
+      <h1 className="sr-only">About Anchan Ayurveda Shop – Anchan Ayurvedic Industries, Padubidri</h1>
       <Intro />
       <Whyus />
 

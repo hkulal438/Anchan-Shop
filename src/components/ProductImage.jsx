@@ -68,7 +68,7 @@ export default function ProductImage({ product, className = "", eager = false })
   if (product.image) {
     return (
       <div className={`pimg pimg--photo ${className}`}>
-        <img src={product.image} alt={product.name} loading={eager ? "eager" : "lazy"} />
+        <img src={product.image} alt={`${product.name} – Anchan Ayurveda`} loading={eager ? "eager" : "lazy"} />
       </div>
     );
   }

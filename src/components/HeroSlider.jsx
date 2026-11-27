@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import Icon, { WhatsAppIcon } from "./Icons";
 import doctorPhoto from "../assets/hero/doctor.webp";
-import harmonyBanner from "../assets/hero/Ayurvedic Harmony in Green Nature.png";
+import harmonyBanner from "../assets/hero/harmony-banner.webp";
 import familyPhoto from "../assets/hero/family.webp";
-import digestiveBanner from "../assets/hero/Dr. Anchan’s Herbal Digestive Care.png";
+import digestiveBanner from "../assets/hero/digestive-banner.webp";
 
 const DURATION = 7000; // ms each slide stays
 

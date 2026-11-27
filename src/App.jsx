@@ -14,9 +14,11 @@ import Categories from "./pages/Categories";
 import Consult from "./pages/Consult";
 import TrackOrder from "./pages/TrackOrder";
 import { SHOP } from "./config";
+import useSeo from "./useSeo";
 
 export default function App() {
   const { pathname } = useLocation();
+  useSeo(pathname);
 
   // new page → start at the top
   useEffect(() => {
