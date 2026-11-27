@@ -837,7 +837,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/drakshasava.webp",
   "imageBg": null
  },
  {
@@ -909,7 +909,7 @@ export const products = [
     "mrp": 1450
    }
   ],
-  "image": null,
+  "image": "/products/jeerakadyarishta.webp",
   "imageBg": null
  },
  {
@@ -1021,7 +1021,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/khadirarishta.webp",
   "imageBg": null
  },
  {
@@ -1096,7 +1096,7 @@ export const products = [
     "mrp": 1450
    }
   ],
-  "image": null,
+  "image": "/products/kumaryasava-no-1.webp",
   "imageBg": null
  },
  {
@@ -1132,7 +1132,7 @@ export const products = [
     "mrp": 1425
    }
   ],
-  "image": null,
+  "image": "/products/kumaryasava-no-3.webp",
   "imageBg": null
  },
  {
@@ -1166,7 +1166,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/kutajarishta.webp",
   "imageBg": null
  },
  {
@@ -1205,7 +1205,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/lodhrasava.webp",
   "imageBg": null
  },
  {
@@ -1314,7 +1314,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/maharasnadi-kada.webp",
   "imageBg": null
  },
  {
@@ -1387,7 +1387,7 @@ export const products = [
     "mrp": 1230
    }
   ],
-  "image": null,
+  "image": "/products/musthakarishta.webp",
   "imageBg": null
  },
  {
@@ -1421,7 +1421,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/panchatikta-kwatha.webp",
   "imageBg": null
  },
  {
@@ -1457,7 +1457,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/pathyadi-kada.webp",
   "imageBg": null
  },
  {
@@ -1493,7 +1493,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/parpatadyarishta.webp",
   "imageBg": null
  },
  {
@@ -1528,7 +1528,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/pippalyadyasava.webp",
   "imageBg": null
  },
  {
@@ -1561,7 +1561,7 @@ export const products = [
     "mrp": 1290
    }
   ],
-  "image": null,
+  "image": "/products/prakrithi.webp",
   "imageBg": null
  },
  {
@@ -1595,7 +1595,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/punarnavasava.webp",
   "imageBg": null
  },
  {
@@ -1630,7 +1630,7 @@ export const products = [
     "mrp": 1275
    }
   ],
-  "image": null,
+  "image": "/products/pushkaramoolasava.webp",
   "imageBg": null
  },
  {
@@ -1706,7 +1706,7 @@ export const products = [
     "mrp": 1450
    }
   ],
-  "image": null,
+  "image": "/products/saraswatharishta.webp",
   "imageBg": null
  },
  {
@@ -1817,7 +1817,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/usheerasava.webp",
   "imageBg": null
  },
  {
@@ -1851,7 +1851,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/vasakarishta.webp",
   "imageBg": null
  },
  {
@@ -1887,7 +1887,7 @@ export const products = [
     "mrp": 1360
    }
   ],
-  "image": null,
+  "image": "/products/vidangarishta.webp",
   "imageBg": null
  },
  {
